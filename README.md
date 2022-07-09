@@ -1,2 +1,2 @@
-# Python - intermediario
-O que eu aprendi sobre python aplicado
+# Python - intermediary
+What I learned about python applied.
