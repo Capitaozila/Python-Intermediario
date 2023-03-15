@@ -16,15 +16,40 @@ inteiro, informe que não é um número inteiro.
 
 
 """
-Faça um programa que pergunte a hora ao usuário e, baseando-se no horário 
+Faça um programa que pergunte a horario ao usuário e, baseando-se no horário 
 descrito, exiba a saudação apropriada. Ex. 
 Bom dia 0-11, Boa tarde 12-17 e Boa noite 18-23.
 """
 
-horario = input('Que horas são? ')
-horario = str(horario)
-print(f'Bom dia! Ja são {horario} horas')
+# entrada = input('Em números inteiros: que horas tem? ')
 
+# entrada = '25'
+
+# try:
+#     horario = int(entrada)
+
+#     madrugada = horario >= 0 and horario <= 6 or horario == 24
+#     dia = horario >= 7 and horario <= 12
+#     tarde = horario >= 13 and horario <= 17
+#     noite = horario >= 18 and horario <= 23
+
+#     if madrugada:
+#         print('Boa madrugada!')
+
+#     elif dia:
+#         print('Bom dia!')
+
+#     elif tarde:
+#         print('Boa tarde!')
+
+#     elif noite:
+#         print('Boa noite!')
+
+#     else:
+#         print('Não reconheço esse hórario')
+
+# except:
+#     print(f'"{entrada}" não é um número inteiro válido')
 
 """
 Faça um programa que peça o primeiro nome do usuário. Se o nome tiver 4 letras ou 
