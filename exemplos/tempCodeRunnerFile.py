@@ -1,3 +1,8 @@
-    numero_1 = input('Digite um número: ')
-    numero_2 = input('Digite outro número: ')
-    operador = input('Digite o operador: ')
+iteratador = iter(texto)  # iterator
+
+while True:
+    try:
+        letra = next(iteratador)
+        print(letra)
+    except StopIteration:
+        break
