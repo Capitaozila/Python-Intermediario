@@ -1,6 +1,6 @@
 import os
 
-palavra_secreta = 'buriti'
+palavra_secreta = 'vasco'
 letras_acertadas = ''
 numero_tentativas = 0
 
