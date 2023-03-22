@@ -1,6 +1,10 @@
 lista = ['Maria', 'Luis', 'Rayana', 'Caio', 'João', 'Pedro',
          'Paulo', 'José', 'Ana', 'Luisa', 'Manoel', 'Joana']
 
+lista.append('Pedro')
+
+lista.append('Paulo')
+
 index = 0
 
 for nome in lista:
