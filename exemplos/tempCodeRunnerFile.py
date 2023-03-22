@@ -1,8 +1,2 @@
-iteratador = iter(texto)  # iterator
-
-while True:
-    try:
-        letra = next(iteratador)
-        print(letra)
-    except StopIteration:
-        break
+for x in range(0, 3):
+#     print('-----------------')
