@@ -1,57 +1,16 @@
-while True:
-    numero_1 = input('Digite um número: ')
-    numero_2 = input('Digite outro número: ')
-    operador = input('Digite o operador: ')
+"""
+split e join com list e str
+split - divide uma string (list)
+join - une uma string
+"""
+frase = '   Olha só que   , coisa interessante          '
+lista_frases_cruas = frase.split(',')
 
-    # numero_1 = '1.0'
-    # numero_2 = '2'
-    # operador = '+'
+lista_frases = []
+for i, frase in enumerate(lista_frases_cruas):
+    lista_frases.append(lista_frases_cruas[i].strip())
 
-    numeros_validos = None
-
-    num_1_float = 0
-    num_2_float = 0
-
-    try:
-        num_1_float = float(numero_1)
-        num_2_float = float(numero_2)
-
-        numeros_validos = True
-
-    except:
-        numeros_validos = None
-
-    if numeros_validos is None:
-        print('Pelo menos um dos números digitados é inválido')
-        continue
-
-    operadores_permitidos = '+-/*'
-    operador_valido = operador not in operadores_permitidos or len(
-        operador) > 1
-
-    if operador_valido:
-        print(
-            'Digite um operador válido: +(soma), -(subtração), /(divisão), *(multiplicação)')
-        continue
-
-    if operador == '+':
-        print(num_1_float + num_2_float)
-
-    elif operador == '-':
-        print(num_1_float - num_2_float)
-
-    elif operador == '/':
-        print(num_1_float / num_2_float)
-
-    elif operador == '*':
-        print(num_1_float * num_2_float)
-
-    else:
-        print('Não deveria chegar até aqui')
-
-    # # # # # # # #
-
-    sair = input('Deseja sair? ').lower().startswith('sim')
-
-    if sair:
-        break
+# print(lista_frases_cruas)
+# print(lista_frases)
+frases_unidas = ', '.join(lista_frases)
+print(frases_unidas)
