@@ -43,8 +43,7 @@ Ex.:  027.908.343-26 (02790834326)
 """
 
 
-import random
-import sys
+import randomimport sys
 for _ in range (100):
 
     nove_digitos = ''
