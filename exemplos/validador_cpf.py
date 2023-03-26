@@ -43,19 +43,39 @@ Ex.:  027.908.343-26 (02790834326)
 """
 
 
+import re
+import sys
 cpf_enviado_usuario_1 = '74682489070'
 cpf_enviado_usuario_2 = '02790834326'
-cpf_enviado_usuario_3 = '13479649084'
+# cpf_enviado_usuario_3 = '134.796.490-84'\
+#    .replace('-','')\
+#    .replace('','')\
+#    .replace('.','')
+
+entrada = input('Digite seu CPF: ')[:11]
+
+"""Remove todos os caracteres não numéricos do CPF."""
+cpf_enviado_usuario_3 = re.sub(
+    r'[^0-9]',
+    '',
+    entrada
+)
+
+entrada_e_sequencial = entrada == entrada[0] * len(entrada)
+
+if entrada_e_sequencial:
+    print('Você enviou dados sequenciais.')
+    sys.exit()
 
 nove_digitos = cpf_enviado_usuario_3[:9]
-
+"""Calcula os dígitos verificadores do CPF."""
 contador_regressivo_1 = 10
 
 resultado_digito_1 = 0
 for digito in nove_digitos:
     resultado_digito_1 += int(digito) * contador_regressivo_1
     contador_regressivo_1 -= 1
-
+"""Valida o CPF."""
 digito_1 = (resultado_digito_1 * 10) % 11
 digito_1 = digito_1 if digito_1 <= 9 else 0
 
@@ -75,3 +95,5 @@ if cpf_enviado_usuario_3 == cpf_gerado_pelo_calculo:
     print(f'Seu cpf "{cpf_enviado_usuario_3}" é válido')
 else:
     print(f'Seu cpf "{cpf_enviado_usuario_3}" não é válido')
+
+# código refatorado
