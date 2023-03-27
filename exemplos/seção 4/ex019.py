@@ -5,5 +5,5 @@ def executa(funcao, *args):
     return funcao(*args)
 
 
-v = executa(saudacao, 'Bom dia', 'André')
+v = executa(saudacao, 'Bom dia', 'Luis')
 print(v)
