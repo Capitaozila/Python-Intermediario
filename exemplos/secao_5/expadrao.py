@@ -1,0 +1,3 @@
+class Pa:
+  def __init__(self):
+    ...
