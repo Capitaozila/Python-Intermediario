@@ -23,13 +23,16 @@ class Endereco:
     def __init__(self, rua, numero):
         self.rua = rua
         self.numero = numero
+
     def __del__(self):
         print('APAGANDO,', self.rua, self.numero)
 
 
 cliente1 = Cliente("Maria")
-cliente1.inserir_endereco("Dunas Mar", 333)
-cliente1.inserir_endereco("Rua B", 3813)
+cliente1.inserir_endereco_interno("Dunas Mar Interior", 3250)
+cliente1.inserir_endereco_interno("Dunas Mar Centro", 3813)
+endereco_externo = Endereco('Avenida Brasil', 1999)
+cliente1.inserir_endereco_externo(endereco_externo)
 cliente1.listar_enderecos()
 
 del cliente1
