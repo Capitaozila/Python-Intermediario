@@ -51,7 +51,7 @@ for _ in range (100):
    for i in range(9):
       nove_digitos += str(random.randint(0, 9))
 
-   """Calcula os dígitos verificadores do CPF."""
+   """Calcula os dígitos verificadores do CPF"""
    contador_regressivo_1 = 10
 
    resultado_digito_1 = 0
