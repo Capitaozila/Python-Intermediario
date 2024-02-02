@@ -149,3 +149,13 @@ Laterality: Motivos óbvios/não vamos trabalhar com imagens;
 Lossy Image Compression: Motivos óbvios/não vamos trabalhar com imagens;
 
 Manufacturer: "Manufacturer of the device" Motivos óbvios;
+
+Manufacturer Model Name: "Manufacturer's model name of the device" Motivos óbvios;
+
+Modality: Não consigo indentificar sua importância;
+
+Modifying System: Não consigo indentificar sua importância;
+
+Number of Frames: Não há diferenciação/valores nulos;
+
+Operators' Name: 
