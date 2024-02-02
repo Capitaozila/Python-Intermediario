@@ -1,3 +1,5 @@
+## Critérios de seleção de atributos úteis para a análise de dados, em DICOM, para o problema de classificação de imagens de mamografias
+
 Accession Number: "A RIS generated number that identifies the order for the Study". Motivos óbvios;
 
 Acquisition Date: "The date the acquisition of data that resulted in this image started". Motivos óbvios;
@@ -8,45 +10,45 @@ Acquisition Number: Motivos óbvios;
 
 Acquisition Time: Motivos óbvios;
 
-Annotation Display Format ID: 'CR00' e 'Null' são os únicos atributos (não há diferenciação)/valores nulos;
+Annotation Display Format ID: 'CR00' e 'Null' são os únicos atributos (não há diferenciação)/valores vazios;
 
-Anode Target Material: 'MOLYBDENUM' e 'Null' são os únicos atributos (não há diferenciação)/valores nulos;
+Anode Target Material: 'MOLYBDENUM' e 'Null' são os únicos atributos (não há diferenciação)/valores vazios;
 
-Attribute Modification DateTime: todos os valores são nulos;
+Attribute Modification DateTime: todos os valores são vazios;
 
-Bits Allocated: Não há diferenciação/valores nulos;
+Bits Allocated: Não há diferenciação/valores vazios;
 
 Bits Stored: Motivos óbvios;
 
-Body Part Thickness: "The average thickness in mm of the body part examined when compressed, if compression has been applied during exposure.". 'None' e 'Null' são os únicos atributos (não há diferenciação)/valores nulos;
+Body Part Thickness: "The average thickness in mm of the body part examined when compressed, if compression has been applied during exposure.". 'None' e 'Null' são os únicos atributos (não há diferenciação)/valores vazios;
 
 Exame: Motivos óbvios;
 
 Body Part Examined: Motivos óbvios;
 
-Border Density: 'BLACK' e 'Null' são os únicos atributos (não há diferenciação)/valores nulos;
+Border Density: 'BLACK' e 'Null' são os únicos atributos (não há diferenciação)/valores vazios;
 
-Breast Implant Present: não há diferenciação/valores nulos;
+Breast Implant Present: não há diferenciação/valores vazios;
 
-Burned In Annotation: 'NO' e 'Null' são os únicos atributos (não há diferenciação)/valores nulos;
+Burned In Annotation: 'NO' e 'Null' são os únicos atributos (não há diferenciação)/valores vazios;
 
-Calibration Image: Não há diferenciação/valores nulos;
+Calibration Image: Não há diferenciação/valores vazios;
 
-Code Meaning: Não há diferenciação/valores nulos;
+Code Meaning: Não há diferenciação/valores vazios;
 
-Code Value: Não há diferenciação/valores nulos;
+Code Value: Não há diferenciação/valores vazios;
 
-Coding Scheme Designator: Não há diferenciação/valores nulos;
+Coding Scheme Designator: Não há diferenciação/valores vazios;
 
 Columns: "Number of columns in the image. Shall be an exact multiple of the horizontal downsampling factor if any of the samples (planes) are encoded downsampled in the horizontal direction for pixel data encoded in a Native (uncompressed) format. E.g., required to be an even value for a Photometric Interpretation (0028,0004) of YBR_FULL_422.". Como não iremos trabalhar com imagens o número de colunas representada nela será fútil;
 
-Compression Force: 'None' e 'Null' são os únicos atributos (não há diferenciação)/valores nulos;
+Compression Force: 'None' e 'Null' são os únicos atributos (não há diferenciação)/valores vazios;
 
 Content Date: "The date the image pixel data creation started. Required if image is part of a Series in which the images are temporally related. May be present otherwise. Note. This Attribute was formerly known as Image Date.". Motivos óbvios/não vamos trabalhar com imagens;
 
 Content Time: "The time the Waveform data was created.". Motivos óbvio;
 
-Contrast/Bolus Agent: Não há diferenciação/valores nulos;
+Contrast/Bolus Agent: Não há diferenciação/valores vazios;
 
 Date of Last Calibration: "Date when the image acquisition device calibration was last changed in any way. Multiple entries may be used for additional calibrations at other times. See Section C.7.5.1.1.1 for further explanation.". Motivos óbvios;
 
@@ -56,7 +58,7 @@ Detector Active Dimension(s): "Dimensions in mm of the active area. If Detector 
 
 Detector Active Shape: . Motivos óbvios/não vamos trabalhar com imagens;
 
-Detector Binning: Não há diferenciação/valores nulos;
+Detector Binning: Não há diferenciação/valores vazios;
 
 Detector Conditions Nominal Flag: . Motivos óbvios/não vamos trabalhar com imagens;
 
@@ -78,7 +80,7 @@ Deviation Index: . Motivos óbvios/não vamos trabalhar com imagens;
 
 Device Serial Number: . Motivos óbvios/não vamos trabalhar com imagens;
 
-Distance Source to Detector: Não há diferenciação/valores nulos;
+Distance Source to Detector: Não há diferenciação/valores vazios;
 
 Distance Source to Patient: . Motivos óbvios/não vamos trabalhar com imagens;
 
@@ -86,7 +88,7 @@ Estimated Radiographic Magnification Factor: . Motivos óbvios/não vamos trabal
 
 Ethnic Group: . Motivos óbvios/não vamos trabalhar com imagens;
 
-Exposure: Não há diferenciação/valores nulos;
+Exposure: Não há diferenciação/valores vazios;
 
 Exposure Control Mode: . Motivos óbvios/não vamos trabalhar com imagens;
 
@@ -106,7 +108,7 @@ Field of View Shape: . Motivos óbvios/não vamos trabalhar com imagens;
 
 Film Orientation: . Motivos óbvios/não vamos trabalhar com imagens;
 
-Filter Material: não há diferenciação/valores nulos;
+Filter Material: não há diferenciação/valores vazios;
 
 Filter Thickness Maximum: . Motivos óbvios/não vamos trabalhar com imagens;
 
@@ -114,9 +116,9 @@ Filter Thickness Minimum: . Motivos óbvios/não vamos trabalhar com imagens;
 
 Focal Spot(s): . Motivos óbvios/não vamos trabalhar com imagens;
 
-Gantry ID: 
+Gantry ID:
 
-Grid: não há diferenciação/valores nulos;
+Grid: não há diferenciação/valores vazios;
 
 High Bit: "Most significant bit for pixel sample data. Each sample shall have the same high bit. High Bit (0028,0102) shall be one less than Bits Stored (0028,0101). See PS3.5 for further explanation." Motivos óbvios/não vamos trabalhar com imagens;
 
@@ -156,6 +158,28 @@ Modality: Não consigo indentificar sua importância;
 
 Modifying System: Não consigo indentificar sua importância;
 
-Number of Frames: Não há diferenciação/valores nulos;
+Number of Frames: Não há diferenciação/valores vazios;
 
-Operators' Name: 
+Operators' Name: Não consigo indentificar sua importância;
+
+Organ Dose: Não consigo indentificar sua importância;
+"
+Organ Exposed: "Organ to which Organ Dose (0040,0316) applies." Sua importância é relativa, já que todo exame de mamografia é feito na mama;
+
+Other Patient IDs: "Other identifiers for the Patient." Motivos óbvios/valores vazios;
+
+Other Patient Names: "Other names for the Patient." Motivos óbvios/valores vazios;
+
+Partial View: valores vazios;
+
+Partial View Description: valores vazios;
+
+Patient Comments: 
+
+Patient ID: motivos óbvios;
+
+Patient Orientation: 
+
+Patient's Age: Útil para identificar
+
+Patient's Birth Date: motivos óbvios;
