@@ -194,4 +194,43 @@ Performed Procedure Step ID: valores vazios;
 
 Performing Physician's Name: valores vazios;
 
-Photometric Interpretation: "MONOCHROME1" e "MONOCHROME2" são os únicos atributos (não há diferenciação)/valores vazios;
+Photometric Interpretation: "MONOCHROME1" e "MONOCHROME2" são os únicos atributos (não há diferenciação)/valores vazios; "In particular this means that the values of Rows, Columns, Bits Stored, Bits Allocated, High Bit, Pixel Representation, Samples per Pixel, Photometric Interpretation and Planar Configuration applicable to all of the frames needs to be the same. In special cases, such as where Bits Stored is less than Bits Allocated but varies per frame, it may be safe to use the largest value for all the frames and ensure that any unused high bits are appropriately masked before encoding. It is not expected that source images with different numbers of Rows and Columns will be combined (by padding the periphery of images smaller than the largest); quite apart from not being the intended use case, this has the potential to greatly expand the size of the instance, and might also require adjustment of the Image Position (Patient) values. If the value of Photometric Interpretation in the source single frame images is not permitted for the Enhanced Multi-frame image IOD, lossless conversion of the PixelData and updating of the related Attributes is required, e.g., from MONOCHROME1 to MONOCHROME2."
+
+---
+
+Pixel Intensity Relationship: "LIN" e vazio são os únicos atributos e não há diferenciação;
+
+Pixel Intensity Relationship Sign: "-1" e vazio são os únicos atributos e não há diferenciação;
+
+Pixel Padding Range Limit: "1" e vazio são os únicos atributos e não há diferenciação;
+
+Pixel Padding Value: "0" e vazio são os únicos atributos e não há diferenciação;
+
+Pixel Representation: não há diferenciação(todos os valores são "0");
+
+Pixel Spacing: é importante;
+
+Plate ID: motivos óbvios;
+
+Positioner Primary Angle: "0" e vazio são os únicos atributos e não há diferenciação;
+
+Positioner Secondary Angle: "None" e vazio são os únicos atributos e não há diferenciação;
+
+Positioner Type: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+
+Presentation Intent Type: "FOR PRESENTATION" e vazio são os únicos atributos e não há diferenciação;
+
+Presentation LUT Shape: é importante;
+
+Private Creator: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+
+Private tag data: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+
+Protocol Name: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+
+Quality Control Image: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+
+Reason for the Attribute Modification: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+
+Referenced SOP Class UID: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+
