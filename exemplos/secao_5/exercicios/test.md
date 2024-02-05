@@ -222,15 +222,82 @@ Presentation Intent Type: "FOR PRESENTATION" e vazio são os únicos atributos e
 
 Presentation LUT Shape: é importante;
 
-Private Creator: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+Private Creator: "FDMS 1.0" e vazios são os únicos atributos e não há diferenciação;
 
-Private tag data: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+Private tag data: "1" e "b'01'" são os únicos atributos e não há diferenciação;
 
-Protocol Name: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+Protocol Name: "Mammography Routine" e vazios são os únicos atributos e não há diferenciação, além disso é fútil ja que todos os exames são de mamografia;
 
-Quality Control Image: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+Quality Control Image: não há diferenciação/valores vazios;
 
-Reason for the Attribute Modification: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+Reason for the Attribute Modification: não há diferenciação/valores vazios;
 
-Referenced SOP Class UID: "MAMMOGRAPHIC" e "NONE" são os únicos atributos e não há diferenciação;
+Referenced SOP Class UID: não há diferenciação/valores vazios;
 
+Referenced SOP Instance UID: não há diferenciação/valores vazios;
+
+Referring Physician's Name: não há diferenciação/valores vazios;
+
+Requested Procedure ID: não há diferenciação/valores vazios;
+
+Requesting Service: não há diferenciação/valores vazios;
+
+Rescale Intercept: não há diferenciação(todos os valores são "0");
+
+Rescale Slope: não há diferenciação(todos os valores são "1");
+
+Rescale Type: não há diferenciação(todos os valores são "US");
+
+Rows: "Shall be an exact multiple of the vertical downsampling factor if any of the samples (planes) are encoded downsampled in the vertical direction for pixel data encoded in a Native (uncompressed) format. E.g., required to be an even value for a Photometric Interpretation (0028,0004) of YBR_FULL_422." é importante;
+
+SOP Class UID: não há diferenciação(todos os valores são "1.2.840.10008.5")
+
+SOP Instance UID: por motivos óbvios não precisamos desse ID;
+
+Samples per Pixel: "1" e vazios são os únicos atributos e não há diferenciação;
+
+Scheduled Procedure Step Description: não há diferenciação/valores vazios;
+
+Scheduled Procedure Step ID: não há diferenciação/valores vazios;
+
+Sensitivity: "this value is manufacturer-specific. DICOM specifies Standard Attributes in Table 10-23 'Exposure Index Macro', which are recommended." é importante;
+
+Series Date: "The date the Series started." não é importante;
+
+Series Description: "A description of the Series." não é importante;
+
+Series Instance UID: "A unique identifier for the Series." não é importante;
+
+Series Number: "A number that identifies this Series." não é importante;
+
+Series Time: "The time the Series started." não é importante;
+
+Software Versions: "The version of the software that produced the image." é importante;
+
+Source of Previous Values: "The source of the values in the Attributes of the current instance." não é importante;
+
+Spatial Resolution: "The extent to which the spatial locations of all pixels are preserved during the processing of the source image that resulted in the current image" é importante, porém não há diferenciação(valores vazios);
+
+Specific Character Set: não há diferenciação(todos os valores são "ISO_IR 100");
+
+Station Name: "User defined name identifying the machine that produced the Composite Instances." não é importante;
+
+Study Comments: "Comments related to the Study." valores vazios ou "MAMOGRAFIA;
+
+Study Date: "The date the Study started." não é importante;
+
+Study Description: "A description of the Study." "Mammography Routine" e vazios são os únicos atributos e não há diferenciação;
+
+Study ID: "A number that identifies this Study." não é importante;
+
+Study Instance UID: "A unique identifier for the Study." não é importante;
+
+Study Time: "The time the Study started." não é importante;
+
+Target Exposure Index: "The target value used to calculate Deviation Index (0018,1413) as defined in IEC 62494-1." é importante;
+
+Time of Last Calibration: "Time when the image acquisition device calibration was last changed in any way. Multiple entries may be used. See Section C.7.5.1.1.1 for further explanation." é importante, porém não há diferenciação(valores vazios);
+
+Time of Last Detector Calibration: "Time when the detector calibration was last changed in any way. Multiple entries may be used. See Section C." é importante;
+
+Trim: 
