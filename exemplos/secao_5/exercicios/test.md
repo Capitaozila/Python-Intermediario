@@ -1,5 +1,9 @@
 ## Critérios de seleção de atributos úteis para a análise de dados, em DICOM, para o problema de classificação de imagens de mamografias
 
+Exame: Motivos óbvios, nomes de paciente, de laudo e IDs, por exemplo, não são importantes;
+
+BIRADS: "Breast Imaging Reporting and Data System" é um sistema de classificação de exames de mamografia, que é importante para a análise;
+
 Accession Number: "A RIS generated number that identifies the order for the Study". Motivos óbvios;
 
 Acquisition Date: "The date the acquisition of data that resulted in this image started". Motivos óbvios;
@@ -21,8 +25,6 @@ Bits Allocated: Não há diferenciação/valores vazios;
 Bits Stored: Motivos óbvios;
 
 Body Part Thickness: "The average thickness in mm of the body part examined when compressed, if compression has been applied during exposure.". 'None' e 'Null' são os únicos atributos (não há diferenciação)/valores vazios;
-
-Exame: Motivos óbvios, nomes de paciente, de laudo e IDs, por exemplo, não são importantes;
 
 Body Part Examined: Motivos óbvios(todas as imagens são de mama);
 
@@ -96,49 +98,51 @@ Exposure Control Mode: "AUTOMATIC" e vazio são os únicos atributos e não há 
 
 Exposure Control Mode Description: "AEC" e vazio são os únicos atributos e não há diferenciação;
 
-Exposure Index: . é importante;
+Exposure Index: "Measure of the detector response to radiation in the relevant image region of an image acquired with a digital X-Ray imaging system as defined in IEC 62494-1." é importante;
 
-Exposure Status: . é importante;
+Exposure Status: "NORMAL" e vazio são os únicos atributos e não há diferenciação;
 
-Exposure Time: . é importante;
+Exposure Time: "800" e vazio são os únicos atributos e não há diferenciação;
 
-Exposure in uAs: . é importante;
+Exposure in uAs: "80000" e vazio são os únicos atributos e não há diferenciação;
 
-Field of View Dimension(s): . é importante;
+Field of View Dimension(s): "[292, 233]" e vazio são os únicos atributos e não há diferenciação;
 
-Field of View Shape: . é importante;
+Field of View Origin: "[1, 1]" e vazio são os únicos atributos e não há diferenciação;
 
-Film Orientation: . é importante;
+Field of View Shape: "RECTANGLE" e vazio são os únicos atributos e não há diferenciação;
 
-Filter Material: não há diferenciação/valores vazios;
+Film Orientation: "LANDSCAPE" e vazio são os únicos atributos e não há diferenciação;
 
-Filter Thickness Maximum: . é importante;
+Filter Material: "MOLYBDENUM" e vazio são os únicos atributos e não há diferenciação;
 
-Filter Thickness Minimum: . é importante;
+Filter Thickness Maximum: "None" e vazio são os únicos atributos e não há diferenciação;
 
-Focal Spot(s): . é importante;
+Filter Thickness Minimum: "None" e vazio são os únicos atributos e não há diferenciação;
 
-Gantry ID:
+Focal Spot(s): "None" e vazio são os únicos atributos e não há diferenciação;
 
-Grid: não há diferenciação/valores vazios;
+Gantry ID: não há diferenciação(todos os valores são valores vazios);
+
+Grid: não há diferenciação(todos os valores são valores vazios);
 
 High Bit: "Most significant bit for pixel sample data. Each sample shall have the same high bit. High Bit (0028,0102) shall be one less than Bits Stored (0028,0101). See PS3.5 for further explanation." é importante;
 
-Imagem comments: é importante;
+Imagem comments: não há diferenciação(todos os valores são valores vazios, exceto 1 que está escrito "XXXXX")
 
-Image Display Format: é importante;
+Image Display Format: "STANDARD\1,1" e vazio são os únicos atributos e não há diferenciação;
 
 Image Laterality: é importante para identificar;
 
 Image Type: é importante;
 
-Image and Fluoroscopy Area Dose Product: é importante;
+Image and Fluoroscopy Area Dose Product: "0" e vazio são os únicos atributos e não há diferenciação;
 
 Imager Pixel Spacing: é importante;
 
-Immages in Acquisition: é importante;
+Immages in Acquisition: "None" e vazio são os únicos atributos e não há diferenciação;
 
-Instance Number: "A number that identifies this image." é importante;
+Instance Number: "A number that identifies this image." não é importante;
 
 Instituition Name: Motivos óbvios;
 
@@ -146,43 +150,43 @@ Institutional Department Name: Motivos óbvios;
 
 Issuer of Patient ID: "Identifier of the Assigning Authority (system, organization, agency, or department) that issued the Patient ID." Motivos óbvios;
 
-KVP: Motivos óbvios/ não vamos trabalhar com imagens;
+KVP: "28" e vazio são os únicos atributos e não há diferenciação;
 
-Laterality: é importante;
+Laterality: não há diferenciação(todos os valores são valores vazios);
 
-Lossy Image Compression: é importante;
+Lossy Image Compression: "0" e vazio são os únicos atributos e não há diferenciação;
 
 Manufacturer: "Manufacturer of the device" Motivos óbvios;
 
 Manufacturer Model Name: "Manufacturer's model name of the device" Motivos óbvios;
 
-Modality: Não consigo indentificar sua importância;
+Modality: é importante;
 
-Modifying System: Não consigo indentificar sua importância;
+Modifying System: não há diferenciação(todos os valores são valores vazios);
 
-Number of Frames: Não há diferenciação/valores vazios;
+Number of Frames: "1" e vazio são os únicos atributos e não há diferenciação;
 
-Operators' Name: Não consigo indentificar sua importância;
+Operators' Name: "User" e vazio são os únicos atributos e não há diferenciação/motivos óbvios;
 
-Organ Dose: Não consigo indentificar sua importância;
-"
-Organ Exposed: "Organ to which Organ Dose (0040,0316) applies." Sua importância é relativa, já que todo exame de mamografia é feito na mama;
+Organ Dose: "None" e vazio são os únicos atributos e não há diferenciação;
+
+Organ Exposed: "Organ to which Organ Dose (0040,0316) applies." Não é importante, já que todo exame de mamografia é feito na mama;
 
 Other Patient IDs: "Other identifiers for the Patient." Motivos óbvios/valores vazios;
 
 Other Patient Names: "Other names for the Patient." Motivos óbvios/valores vazios;
 
-Partial View: valores vazios;
+Partial View: não há diferenciação(todos os valores são valores vazios);
 
-Partial View Description: valores vazios;
+Partial View Description: não há diferenciação(todos os valores são valores vazios);
 
-Patient Comments: valores vazios;
+Patient Comments: não há diferenciação(todos os valores são valores vazios);
 
 Patient ID: motivos óbvios;
 
-Patient Orientation:
+Patient Orientation: é importante;
 
-Patient's Age: Útil para identificar;
+Patient's Age: é importante;
 
 Patient's Birth Date: motivos óbvios;
 
@@ -190,11 +194,11 @@ Patient's Name: motivos óbvios;
 
 Patient's Sex: motivos óbvios, pois a incidência de câncer de mama acontece, na sua grande maioria, em mulheres;
 
-Performed Procedure Step Description: valores vazios;
+Performed Procedure Step Description: não há diferenciação(todos os valores são valores vazios);
 
-Performed Procedure Step ID: valores vazios;
+Performed Procedure Step ID: não há diferenciação(todos os valores são valores vazios);
 
-Performing Physician's Name: valores vazios;
+Performing Physician's Name: não há diferenciação(todos os valores são valores vazios);
 
 Photometric Interpretation: "MONOCHROME1" e "MONOCHROME2" são os únicos atributos (não há diferenciação)/valores vazios; "In particular this means that the values of Rows, Columns, Bits Stored, Bits Allocated, High Bit, Pixel Representation, Samples per Pixel, Photometric Interpretation and Planar Configuration applicable to all of the frames needs to be the same. In special cases, such as where Bits Stored is less than Bits Allocated but varies per frame, it may be safe to use the largest value for all the frames and ensure that any unused high bits are appropriately masked before encoding. It is not expected that source images with different numbers of Rows and Columns will be combined (by padding the periphery of images smaller than the largest); quite apart from not being the intended use case, this has the potential to greatly expand the size of the instance, and might also require adjustment of the Image Position (Patient) values. If the value of Photometric Interpretation in the source single frame images is not permitted for the Enhanced Multi-frame image IOD, lossless conversion of the PixelData and updating of the related Attributes is required, e.g., from MONOCHROME1 to MONOCHROME2."
 
