@@ -14,7 +14,7 @@ Annotation Display Format ID: 'CR00' e 'Null' são os únicos atributos (não h�
 
 Anode Target Material: 'MOLYBDENUM' e 'Null' são os únicos atributos (não há diferenciação)/valores vazios;
 
-Attribute Modification DateTime: todos os valores são vazios;
+Attribute Modification DateTime: todos os valores são vazio;
 
 Bits Allocated: Não há diferenciação/valores vazios;
 
@@ -222,11 +222,11 @@ Presentation Intent Type: "FOR PRESENTATION" e vazio são os únicos atributos e
 
 Presentation LUT Shape: é importante;
 
-Private Creator: "FDMS 1.0" e vazios são os únicos atributos e não há diferenciação;
+Private Creator: "FDMS 1.0" e vazio são os únicos atributos e não há diferenciação;
 
 Private tag data: "1" e "b'01'" são os únicos atributos e não há diferenciação;
 
-Protocol Name: "Mammography Routine" e vazios são os únicos atributos e não há diferenciação, além disso é fútil ja que todos os exames são de mamografia;
+Protocol Name: "Mammography Routine" e vazio são os únicos atributos e não há diferenciação, além disso é fútil ja que todos os exames são de mamografia;
 
 Quality Control Image: não há diferenciação/valores vazios;
 
@@ -254,7 +254,7 @@ SOP Class UID: não há diferenciação(todos os valores são "1.2.840.10008.5")
 
 SOP Instance UID: por motivos óbvios não precisamos desse ID;
 
-Samples per Pixel: "1" e vazios são os únicos atributos e não há diferenciação;
+Samples per Pixel: "1" e vazio são os únicos atributos e não há diferenciação;
 
 Scheduled Procedure Step Description: não há diferenciação/valores vazios;
 
@@ -286,7 +286,7 @@ Study Comments: "Comments related to the Study." valores vazios ou "MAMOGRAFIA;
 
 Study Date: "The date the Study started." não é importante;
 
-Study Description: "A description of the Study." "Mammography Routine" e vazios são os únicos atributos e não há diferenciação;
+Study Description: "A description of the Study." "Mammography Routine" e vazio são os únicos atributos e não há diferenciação;
 
 Study ID: "A number that identifies this Study." não é importante;
 
@@ -300,4 +300,82 @@ Time of Last Calibration: "Time when the image acquisition device calibration wa
 
 Time of Last Detector Calibration: "Time when the detector calibration was last changed in any way. Multiple entries may be used. See Section C." é importante;
 
-Trim: 
+Trim: "NO" e vazio são os únicos atributos e não há diferenciação;
+
+View Position: "CC" e "MLO" são os únicos atributos e não há diferenciação, porém é importante;
+
+Window Center: "The center of the window in Hounsfield units or other scale." é importante;
+
+Window Width: "The width of the window in Hounsfield units or other scale." é importante;
+
+X-Ray Tube Current: "The current in milliAmperes used in the X-Ray tube." é importante, porém "100" e vazio são os únicos atributos e não há diferenciação;
+
+[Blackening Process Flag]: "0" e "1" são os únicos atributos e não há diferenciação, não encontrei dados que explicasse o que é, deve ser importante;
+
+[Data Compression Code]: " The value of the "compression ratio" is encoded as a numeric value that represents the numerator of an implicit ratio in which the denominator is always one, consistent with the traditional representation in the literature. Note: For example, a compression ratio of 30:1 would be described with a value of 30." é importante;
+
+[Distribution Code]: "12345678" e vazio são os únicos atributos e não há diferenciação, não encontrei dados que explicasse o que é, não é importante;
+
+[EDR Mode]: não encontrei dados que explicasse a tag, porém "0" e vazio são os únicos atributos e não há diferenciação;
+
+[Equipment Type-Specific Information]: não encontrei dados que explicasse a tag, porém "none" e vazio são os únicos atributos e não há diferenciação;
+
+[Exposure Unit Type Code]: não encontrei dados que explicasse a tag. porém "F3" e vazio são os únicos atributos e não há diferenciação;
+
+[Extended Reading Size Value]: não encontrei dados que explicasse a tag, porém "0A", "2B", "1B" e vazio são os únicos atributos;
+
+[FCR Image ID]: não encontrei dados que explicasse a tag;
+
+[FNC Parameters]: não encontrei dados que explicasse a tag, porém "ACC0.5" e vazio são os únicos atributos e não há diferenciação;
+
+[Film Annotation Character String 2]: não há diferenciação/valores vazios;
+
+[Film Output Format]: "10" e vazio são os únicos atributos e não há diferenciação;
+
+[Film UID]: não é importante;
+
+[Image Display Information Version No.]: não encontrei dados que explicasse a tag;
+
+[Image No. in the Set]: não encontrei dados que explicasse a tag;
+
+[Image Position Specifying Flag]: "1", "2" e vazio são os únicos atributos e não encontrei dados que explicasse a tag;
+
+[Image Processing Modification Flag]: "0" e vazio são os únicos atributos e não há diferenciação;
+
+[Image Processing Type]: "RT" e vazio são os únicos atributos e não há diferenciação;
+
+[Image Scanning Direction]: não encontrei dados que explicasse a tag;
+
+[Image UID]: não é importante;
+
+[Kanji Body Part for Exposure]: não há diferenciação/valores vazios;
+
+[Kanji Department Name]: não há diferenciação/valores vazios/não é importante;
+
+[Kanji Hospital Name]: não há diferenciação/valores vazios/não é importante;
+
+[Kanji Menu Name]: não há diferenciação/valores vazios/não é importante;
+
+[Line Density Code]: "K4" e "K2" são os únicos atributos e não há diferenciação, não encontrei dados que explicasse a tag;
+
+[Mag./Reduc. Ratio]: "100" e vazio são os únicos atributos e não há diferenciação, não encontrei dados que explicasse a tag;
+
+[Pair Processing Information]: não encontrei dados que explicasse a tag;
+
+[Patient Information Version No.]: "0", "256" e vazio são os únicos atributos e não há diferenciação, não encontrei dados que explicasse a tag;
+
+[Processing Information Flag]: não encontrei dados que explicasse a tag;
+
+[Radiographer's Code]: não encontrei dados que explicasse a tag, não há diferenciação/valores vazios;
+
+[Reading Gain Gp]: não encontrei dados que explicasse a tag;
+
+[Reading Sensitivity Center]: "0" e vazio são os únicos atributos e não há diferenciação, não encontrei dados que explicasse a tag;
+
+[Relative Light Emission Amount Sk]: não encontrei dados que explicasse a tag;
+
+[Route Image UID]: não encontrei dados que explicasse a tag, não é importante;
+
+[Set No.]: não encontrei dados que explicasse a tag, não há diferenciação/valores vazios;
+
+[Term of Correction for Each IP Type St]: não encontrei dados que explicasse a tag, "0" e vazio são os únicos atributos e não há diferenciação;
