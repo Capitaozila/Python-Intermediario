@@ -126,7 +126,7 @@ Imagem comments: Motivos óbvios/não vamos trabalhar com imagens;
 
 Image Display Format: Motivos óbvios/não vamos trabalhar com imagens;
 
-Image Laterality: Motivos óbvios/não vamos trabalhar com imagens;
+Image Laterality: é importante para identificar;
 
 Image Type: Motivos óbvios/não vamos trabalhar com imagens;
 
@@ -174,12 +174,24 @@ Partial View: valores vazios;
 
 Partial View Description: valores vazios;
 
-Patient Comments: 
+Patient Comments: valores vazios;
 
 Patient ID: motivos óbvios;
 
-Patient Orientation: 
+Patient Orientation:
 
-Patient's Age: Útil para identificar
+Patient's Age: Útil para identificar;
 
 Patient's Birth Date: motivos óbvios;
+
+Patient's Name: motivos óbvios;
+
+Patient's Sex: motivos óbvios, pois a incidência de câncer de mama acontece, na sua grande maioria, em mulheres;
+
+Performed Procedure Step Description: valores vazios;
+
+Performed Procedure Step ID: valores vazios;
+
+Performing Physician's Name: valores vazios;
+
+Photometric Interpretation: "MONOCHROME1" e "MONOCHROME2" são os únicos atributos (não há diferenciação)/valores vazios;
