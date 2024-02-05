@@ -68,33 +68,33 @@ Detector Configuration: "AREA" e vazio são os únicos atributos e não há dife
 
 Detector Description: Motivos óbvios/não precisamos saber a descrição de cada detector;
 
-Detector Element Physical Size: . é importante;
+Detector Element Physical Size: "[0.076, 0.076]" e vazio são os únicos atributos e não há diferenciação;
 
-Detector Element Spacing: . é importante;
+Detector Element Spacing: "[0.076, 0.076]" e vazio são os únicos atributos e não há diferenciação;
 
 Detector ID: . Motivos óbvios/não precisamos saber o ID de cada detector;
 
-Detector Temperature: . é importante;
+Detector Temperature: não é importante;
 
-Detector Type: . é importante;
+Detector Type: "SCINTILLATOR" e vazio são os únicos atributos e não há diferenciação;
 
-Deviation Index: . é importante;
+Deviation Index: "A scaled representation of the difference of the Exposure Index compared to the Target Exposure Index as defined in IEC 62494-1 and the report of AAPM TG 116.". É importante;
 
-Device Serial Number: . é importante;
+Device Serial Number: não é importante/valores vazios;
 
-Distance Source to Detector: Não há diferenciação/valores vazios;
+Distance Source to Detector: "660" e vazio são os únicos atributos e não há diferenciação;
 
-Distance Source to Patient: . é importante;
+Distance Source to Patient: "660" e vazio são os únicos atributos e não há diferenciação;
 
-Estimated Radiographic Magnification Factor: . é importante;
+Estimated Radiographic Magnification Factor: "1.0" e vazio são os únicos atributos e não há diferenciação;
 
-Ethnic Group: . é importante;
+Ethnic Group: não há diferenciação(todos os valores são valores vazios);
 
-Exposure: Não há diferenciação/valores vazios;
+Exposure: "80" e vazio são os únicos atributos e não há diferenciação;
 
-Exposure Control Mode: . é importante;
+Exposure Control Mode: "AUTOMATIC" e vazio são os únicos atributos e não há diferenciação;
 
-Exposure Control Mode Description: . é importante;
+Exposure Control Mode Description: "AEC" e vazio são os únicos atributos e não há diferenciação;
 
 Exposure Index: . é importante;
 
