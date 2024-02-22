@@ -67,3 +67,31 @@ print()
 print("3-itemsets mais frequentes:")
 print(frequentItems(items, transacoes, 3, sup))
 print()
+
+
+# Imprime as regras de associação
+# De acordo com o suporte e confiança
+print("Regras de associacao com suporte")
+print("e confianca maiores que 50%")
+f2 = frequentItems(items, transacoes, 2, sup)
+k2 = [k for k in f2.keys()]
+v2 = [v for v in f2.values()]
+f1 = frequentItems(items, transacoes, 1, sup)
+k1 = [k[0] for k in f1.keys()]
+v1 = [v for v in f1.values()]
+for i in range(len(k2)):
+    i1 = k2[i][0]
+    i2 = k2[i][1]
+    for j in range(len(k1)):
+        if k1[j] == i1:
+            confidence = v2[i] / v1[j]
+    if v2[i] >= sup * len(transacoes) and confidence >= conf:
+        print("{0:<6} -> {1:<6}: ({2},{3})".format(i1, i2, str(v2[i]), confidence))
+    i1 = k2[i][1]
+    i2 = k2[i][0]
+    for j in range(len(k1)):
+        if k1[j] == i1:
+            confidence = v2[i] / v1[j]
+    if v2[i] >= sup * len(transacoes) and confidence >= conf:
+        print("{0:<6} -> {1:<6}: ({2},{3})".format(i1, i2, str(v2[i]), confidence))
+        print()
