@@ -21,6 +21,7 @@ transacoes = {
     8: {"Amendoim", "Cafe", "Cerveja", "Ovos"},
     9: {"Amendoim", "Laranja", "Cerveja", "Ovos"},
     10: {"Amendoim", "Cafe", "Cerveja", "Ovos"},
+    10: {"Manteiga", "Cafe", "Cerveja", "Ovos"},
 }
 
 # Agora, "quebramos" cada transação item por item, lendo os valores dos pares "chave-valor" do dicionário de transações. Iteramos cada itemset presente em transacoes.values().
