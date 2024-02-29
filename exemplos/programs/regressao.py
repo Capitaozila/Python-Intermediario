@@ -1,45 +1,22 @@
 from collections import Counter
 import itertools
+import csv
 import sys
 
 # Parâmetros de suporte e confiança
 sup = 0.5
 conf = 0.5
 
-# Em seguida, criamos um dicionário de transações para servir como exemplo em nossa aplicação:
+# Função para ler transações de um arquivo CSV
+def ler_transacoes_de_csv(nome_arquivo):
+    transacoes = {}
+    with open(nome_arquivo, newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        for idx, row in enumerate(reader):
+            transacoes[idx+1] = set(row)
+    return transacoes
 
-
-# Conjunto de transações
-transacoes = {
-    1: {"Cerveja", "Amendoim", "Laranja"},
-    2: {"Cerveja", "Cafe", "Laranja", "Amendoim"},
-    3: {"Cerveja", "Laranja", "Ovos"},
-    4: {"Cerveja", "Amendoim", "Ovos", "Leite"},
-    5: {"Cafe", "Laranja", "Ovos", "Leite"},
-    6: {"Cafe", "Laranja", "Ovos", "Leite"},
-    7: {"Laranja", "Cafe", "Cerveja", "Ovos"},
-    8: {"Amendoim", "Cafe", "Cerveja", "Ovos"},
-    9: {"Amendoim", "Laranja", "Cerveja", "Ovos"},
-    10: {"Amendoim", "Cafe", "Cerveja", "Ovos"},
-    10: {"Manteiga", "Cafe", "Cerveja", "Ovos"},
-}
-
-# Agora, "quebramos" cada transação item por item, lendo os valores dos pares "chave-valor" do dicionário de transações. Iteramos cada itemset presente em transacoes.values().
-
-# Faz a leitura do dicionário de transações
-# Armazena cada item no vetor items
-
-items = []
-for itemset in transacoes.values():
-    for item in itemset:
-        items.append(item)
-
-items = set(items)
-
-
-# No trecho de código a seguir temos algoritmo que cria as regras de associação. A função frequentItems receberá como parâmetros nosso vetor de items (items), o dicionário de transações (trans), a quantidade de items por conjunto (n) e o suporte (s). O módulo itertools é utilizado para realizar todas a n-combinações (n) dos items.
-
-### Cria as regras de associação ##############################
+# Função para criar regras de associação
 def frequentItems(items, trans, n, s):
     itemsets = set(itertools.combinations(items, n))
     itemTransactions = []
@@ -53,10 +30,14 @@ def frequentItems(items, trans, n, s):
             ret.append([k, v])
     return dict(ret)
 
+# Lê transações do arquivo CSV
+transacoes = ler_transacoes_de_csv('./programs/compras.csv')
 
-###############################################################
-
-# Na sequência, vamos imprimir os conjuntos de items (1 a 1, 2 a 2 e 3 a 3) mais frequentes das transações do exemplo.
+# Extrai os items únicos
+items = set()
+for itemset in transacoes.values():
+    for item in itemset:
+        items.add(item)
 
 # Mostra os resultados
 print("1-itemsets mais frequentes:")
@@ -68,7 +49,6 @@ print()
 print("3-itemsets mais frequentes:")
 print(frequentItems(items, transacoes, 3, sup))
 print()
-
 
 # Imprime as regras de associação
 # De acordo com o suporte e confiança
