@@ -1,11 +1,6 @@
-
-Cerveja,Amendoim,Laranja
-Cerveja,Cafe,Laranja,Amendoim
-Cerveja,Laranja,Ovos
-Cerveja,Amendoim,Ovos,Leite
-Cafe,Laranja,Ovos,Leite
-Cafe,Laranja,Ovos,Leite
-Laranja,Cafe,Cerveja,Ovos
-Amendoim,Cafe,Cerveja,Ovos
-Amendoim,Laranja,Cerveja,Ovos
-Amendoim,Cafe,Cerveja,Ovos
+a, c, d, t, w
+c, d, w
+a, d, t, w
+a, c, d, w
+a, c, d, t, w
+c, d, t

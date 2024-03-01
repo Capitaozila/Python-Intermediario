@@ -31,7 +31,7 @@ def frequentItems(items, trans, n, s):
     return dict(ret)
 
 # Lê transações do arquivo CSV
-transacoes = ler_transacoes_de_csv('./programs/compras.csv')
+transacoes = ler_transacoes_de_csv('./compras.csv')
 
 # Extrai os items únicos
 items = set()
@@ -48,6 +48,12 @@ print(frequentItems(items, transacoes, 2, sup))
 print()
 print("3-itemsets mais frequentes:")
 print(frequentItems(items, transacoes, 3, sup))
+print()
+print("4-itemsets mais frequentes:")
+print(frequentItems(items, transacoes, 4, sup))
+print()
+print("5-itemsets mais frequentes:")
+print(frequentItems(items, transacoes, 5, sup))
 print()
 
 # Imprime as regras de associação
