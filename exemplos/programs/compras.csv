@@ -1,6 +1,10 @@
-a, c, d, t, w
-c, d, w
-a, d, t, w
-a, c, d, w
-a, c, d, t, w
-c, d, t
+A,B,C
+C,D,E,F
+A,G,H
+E,H,I,J
+B,C
+A,B,C,D,F
+D,E,F
+G,H
+A,C,J,K
+A,B,C,D

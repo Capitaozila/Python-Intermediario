@@ -4,8 +4,8 @@ import csv
 import sys
 
 # Parâmetros de suporte e confiança
-sup = 0.5
-conf = 0.5
+sup = 0.50
+conf = 0.80
 
 # Função para ler transações de um arquivo CSV
 def ler_transacoes_de_csv(nome_arquivo):
@@ -82,3 +82,32 @@ for i in range(len(k2)):
     if v2[i] >= sup * len(transacoes) and confidence >= conf:
         print("{0:<6} -> {1:<6}: ({2},{3})".format(i1, i2, str(v2[i]), confidence))
         print()
+
+# from prefixspan import PrefixSpan
+
+# # Definindo as transações
+# transactions = [
+#     ["A", "B"],
+#     ["A", "C"],
+#     ["A"],
+#     ["B", "C"],
+#     ["E"],
+#     ["D"],
+#     ["E"],
+#     ["C", "E"],
+#     ["E", "F"],
+#     ["A", "B"],
+#     ["A", "B", "C"],
+#     ["D"],
+#     ["D"]
+# ]
+
+# # Executando o algoritmo PrefixSpan
+# ps = PrefixSpan(transactions)
+
+# # Encontrando os padrões sequenciais com suporte mínimo de 0.5
+# patterns = ps.frequent(0.5)
+
+# # Exibindo os padrões encontrados
+# for pattern in patterns:
+#     print("Padrão:", pattern[1], "Suporte:", pattern[0])
