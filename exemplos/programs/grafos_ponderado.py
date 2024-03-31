@@ -2,6 +2,7 @@ import heapq
 
 def dijkstra(graph, start):
     distances = {vertex: float('infinity') for vertex in graph}
+    previous_vertices = {vertex: None for vertex in graph}
     distances[start] = 0
 
     pq = [(0, start)]
@@ -9,21 +10,32 @@ def dijkstra(graph, start):
     while pq:
         current_distance, current_vertex = heapq.heappop(pq)
 
-        # Nodes can get added to the priority queue multiple times. We only
-        # process a vertex the first time we remove it from the priority queue.
         if current_distance > distances[current_vertex]:
             continue
 
         for neighbor, weight in graph[current_vertex].items():
             distance = current_distance + weight
 
-            # Only consider this new path if it's better than any path we've
-            # already found.
             if distance < distances[neighbor]:
                 distances[neighbor] = distance
+                previous_vertices[neighbor] = current_vertex
                 heapq.heappush(pq, (distance, neighbor))
 
-    return distances
+    return distances, previous_vertices
+
+def shortest_path(graph, start, end):
+    distances, previous_vertices = dijkstra(graph, start)
+    path = []
+    current_vertex = end
+
+    while previous_vertices[current_vertex] is not None:
+        path.append(current_vertex)
+        current_vertex = previous_vertices[current_vertex]
+    path.append(start)
+
+    path = path[::-1]
+
+    return path
 
 # Exemplo de uso:
 graph = {
@@ -38,4 +50,7 @@ graph = {
     '9': {}
 }
 
-print(dijkstra(graph, '1'))
+for end in graph:
+    if end != '1':
+        path = shortest_path(graph, '1', end)
+        print(f'O caminho mais curto do vértice 1 até o vértice {end} é: {" -> ".join(path)}')
