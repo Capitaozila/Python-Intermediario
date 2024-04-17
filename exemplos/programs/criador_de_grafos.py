@@ -11,6 +11,17 @@ G.add_node(2)
 G.add_node(3)
 G.add_node(4)
 
+#exemplo de entrada com uma matrix 
+
+V = [0,1,2,3,4]
+A = [(0,1),(0,2),(1,2),(1,3),(1,2),(2,3),(2,4)]
+
+matrix = [[0,1,1,0,0],
+          [1,0,1,1,0],
+          [1,1,0,1,1],
+          [0,1,1,0,0],
+          [0,0,1,0,0]]
+
 
 # Adiciona arestas ao grafo
 G.add_edge(0, 1)
