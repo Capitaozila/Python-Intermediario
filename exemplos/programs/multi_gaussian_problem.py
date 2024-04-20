@@ -1,49 +1,51 @@
 import numpy as np
-import random
-
-# Taxas de crossover e mutação
-crossover_rate = 0.5
-mutation_rate = 0.02
-
-# Função gaussiana
-def gaussian(x, amp, cen, wid):
-    return amp * np.exp(-(x-cen)**2 / wid)
 
 # Função de fitness
-def fitness(individual, x, data):
-    amp1, cen1, wid1, amp2, cen2, wid2 = individual
-    model = gaussian(x, amp1, cen1, wid1) + gaussian(x, amp2, cen2, wid2)
-    return np.sum((data - model)**2)
+def fitness(x):
+    return np.sum(x**2)
 
-# Operações genéticas
-def mutate(individual):
-    if random.random() < mutation_rate:
-        index = random.randint(0, len(individual) - 1)
-        individual[index] += random.uniform(-0.1, 0.1)
-    return individual
+# Operação de crossover
+def crossover(parent1, parent2):
+    child = parent1.copy()
+    mask = np.random.randint(0, 2, parent1.shape).astype(bool)
+    child[mask] = parent2[mask]
+    return child
 
-def crossover(individual1, individual2):
-    if random.random() < crossover_rate:
-        index = random.randint(1, len(individual1) - 2)
-        return individual1[:index] + individual2[index:]
-    else:
-        return individual1
+# Operação de mutação
+def mutate(x):
+    mutation_mask = np.random.randint(0, 2, x.shape).astype(bool)
+    x[mutation_mask] = np.random.uniform(-1, 1, mutation_mask.sum())
+    return x
 
 # Algoritmo genético
-def genetic_algorithm(x, data, population_size, generations):
-    # Inicializar população
-    population = [np.random.uniform(0, 2, 6) for _ in range(population_size)]
+def genetic_algorithm(population_size, num_generations, num_genes):
+    # Inicializando a população
+    population = np.random.uniform(-1, 1, (population_size, num_genes))
 
-    for _ in range(generations):
-        # Avaliar fitness
-        scores = [fitness(ind, x, data) for ind in population]
+    for generation in range(num_generations):
+        # Avaliando a população
+        fitness_values = np.apply_along_axis(fitness, 1, population)
 
-        # Selecionar pais
-        parents = [population[i] for i in np.argsort(scores)[:2]]
+        # Selecionando os pais para crossover
+        parents = population[np.argsort(fitness_values)[:2]]
 
-        # Crossover e mutação
-        population = [mutate(crossover(parents[0], parents[1]))
-                      for _ in range(population_size)]
+        # Gerando a próxima geração
+        for i in range(population_size):
+            child = crossover(*parents)
+            child = mutate(child)
+            population[i, :] = child
 
-    # Retornar o melhor indivíduo
-    return min(population, key=lambda ind: fitness(ind, x, data))
+    # Retornando o melhor indivíduo da última geração
+    fitness_values = np.apply_along_axis(fitness, 1, population)
+    best_individual = population[np.argmin(fitness_values)]
+    return best_individual
+
+
+#limpar terminal
+import os
+os.system('cls' if os.name == 'nt' else 'clear')
+
+
+# Executando o algoritmo genético
+best_individual = genetic_algorithm(100, 200, 10)
+print("Melhor indivíduo: ", best_individual)
