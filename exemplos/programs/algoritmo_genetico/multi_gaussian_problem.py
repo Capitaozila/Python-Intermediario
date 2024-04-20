@@ -1,8 +1,17 @@
 import numpy as np
 
+# Dados fornecidos
+data = np.array([
+    [0.5, 0.0, 0.0, 0.1],
+    [1.2, 1.0, 0.0, 0.5],
+    [1.0, 0.0, -0.5, 0.5],
+    [1.0, -0.5, 0.0, 0.5],
+    [1.2, 0.0, 1.0, 0.5]
+])
+
 # Função de fitness
 def fitness(x):
-    return np.sum(x**2)
+    return -np.sum([ai * np.exp(-((x[0] - bi)**2 + (x[1] - ci)**2) / di**2) for ai, bi, ci, di in data])
 
 # Operação de crossover
 def crossover(parent1, parent2):
@@ -27,7 +36,7 @@ def genetic_algorithm(population_size, num_generations, num_genes):
         fitness_values = np.apply_along_axis(fitness, 1, population)
 
         # Selecionando os pais para crossover
-        parents = population[np.argsort(fitness_values)[:2]]
+        parents = population[np.argsort(fitness_values)[-2:]]
 
         # Gerando a próxima geração
         for i in range(population_size):
@@ -37,15 +46,9 @@ def genetic_algorithm(population_size, num_generations, num_genes):
 
     # Retornando o melhor indivíduo da última geração
     fitness_values = np.apply_along_axis(fitness, 1, population)
-    best_individual = population[np.argmin(fitness_values)]
+    best_individual = population[np.argmax(fitness_values)]
     return best_individual
 
-
-#limpar terminal
-import os
-os.system('cls' if os.name == 'nt' else 'clear')
-
-
 # Executando o algoritmo genético
-best_individual = genetic_algorithm(100, 200, 10)
+best_individual = genetic_algorithm(100, 200, 2)
 print("Melhor indivíduo: ", best_individual)
