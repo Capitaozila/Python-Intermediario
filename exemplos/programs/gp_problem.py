@@ -32,7 +32,7 @@ def one_point_crossover(parent1, parent2):
     child2 = np.concatenate((parent2[:point], parent1[point:]))
     return child1, child2
 
-# Mutação de bit flip
+# Mutação
 def bit_flip_mutation(individual, mutation_rate):
     for i in range(len(individual)):
         if np.random.rand() < mutation_rate:

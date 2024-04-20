@@ -1,37 +1,35 @@
-
 import numpy as np
 import random
 
+# Taxas de crossover e mutação
+crossover_rate = 0.5
+mutation_rate = 0.02
+
 # Função gaussiana
-
-
 def gaussian(x, amp, cen, wid):
     return amp * np.exp(-(x-cen)**2 / wid)
 
 # Função de fitness
-
-
 def fitness(individual, x, data):
     amp1, cen1, wid1, amp2, cen2, wid2 = individual
     model = gaussian(x, amp1, cen1, wid1) + gaussian(x, amp2, cen2, wid2)
     return np.sum((data - model)**2)
 
 # Operações genéticas
-
-
 def mutate(individual):
-    index = random.randint(0, len(individual) - 1)
-    individual[index] += random.uniform(-0.1, 0.1)
+    if random.random() < mutation_rate:
+        index = random.randint(0, len(individual) - 1)
+        individual[index] += random.uniform(-0.1, 0.1)
     return individual
 
-
 def crossover(individual1, individual2):
-    index = random.randint(1, len(individual1) - 2)
-    return individual1[:index] + individual2[index:]
+    if random.random() < crossover_rate:
+        index = random.randint(1, len(individual1) - 2)
+        return individual1[:index] + individual2[index:]
+    else:
+        return individual1
 
 # Algoritmo genético
-
-
 def genetic_algorithm(x, data, population_size, generations):
     # Inicializar população
     population = [np.random.uniform(0, 2, 6) for _ in range(population_size)]
